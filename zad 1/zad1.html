@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
 </head>
 <body>
-    zad 1
+    <script>
+        $(document).ready(function(){
+            console.log($("ul").html());
+            console.log($("li").html());
+            $("ul").append("<li>" + "Blood of dawnwalker");
+           // $('li').append("<li>" + "Police stories").before().first().last().remove();  
+           // let $a = $('li').last().remove();
+            // $('ul').prepend($a); 
+            // let $a = $('h1');
+            // $('p').append($a).text();
+        });
+
+
+      
+    </script>
+
+    <div id="container">
+        <h1>Lista Gier Komputerowych</h1>
+ 
+    <ul>
+        <li id="pierwszy"><a href="#"></a> The Witcher 3: Wild Hunt</li>
+        <li><a href="#"></a> Cyberpunk 2077</li>
+        <li><a href="#"></a> Elden Ring</li>
+        <li><a href="#"></a> Baldur's Gate 3</li>
+        <li><a href="#"></a> Starfield</li>
+        <li><a href="#"></a> Hollow Knight</li>
+        <li><a href="#" id="Minecraft"></a> Minecraft</li>
+        <li><a href="#"></a> Portal 2</li>
+        <li><a href="#"></a> The Legend of Zelda: Breath of the Wild</li>
+        <li><a href="#"></a> Dark Souls III</li>
+        <li><a href="#"></a> Valorant</li>
+        <li><a href="#"></a> Counter-Strike 2</li>
+    </ul>
+    </div>
+    <p></p>
+
 </body>
 </html>
