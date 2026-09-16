@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+   
+    </head>
+<body>
+ 
+ 
+  <script>
+    $(function(){
+    //   $("#naKoniec").click(function(){
+    //     let text = $("#produkt").val();
+    //     if(text.length != 0){
+    //         $('ul').append("<li>" + text + "</li>")    
+    //     }
+    //     $('input').val("");      
+    //     })
+        // $("#naPoczatek").click(function(){
+        // let text = $("#produkt").val();
+        // if(text.length != 0){
+        //     $('ul').prepend("<li>" + text + "</li>")    
+        // }
+        // $('input').val("");      
+        // })
+
+        //    $("#naKoniec").click(function(){
+        // let text = $("#produkt").val();
+        // if(text.length != 0){
+        //     $('ul').append("<li>" + text + "</li>")
+        //     $('li').first().css({
+        //         "color":"green",
+        //         "font-weigth":"bold"
+        //     })
+        // }
+        // $('input').val("");      
+        // })
+        // $("#naPoczatek").click(function(){
+        // let text = $("#produkt").val();
+        // if(text.length != 0){
+        //     $('ul').prepend("<li>" + text + "</li>");
+        //     $('li').first().css({
+        //         "color":"green",
+        //         "font-weigth":"bold"
+        //     })
+                
+        // }
+        // $('input').val("");      
+        //  })
+        
+        
+            // $('#answer').click(function(){
+            //     if(this.checked){
+            //         $("send").removeAttr("disabled");
+            //     }   
+            $("#answer").change(function(){
+                if(this.checked){
+                    $("#send").removeAttr("disabled")
+                } else{
+                    $("#send").removeAttr("disabled","disabled")
+                }
+            })
+        
+
+    });
+  </script>
+
+<ul id="lista">
+  <li>Chleb</li>
+  <li>Mleko</li>
+</ul>
+<input type="text" id="produkt" placeholder="Nazwa produktu">
+<button id="naKoniec">Dodaj na koniec</button>
+<button id="naPoczatek">Dodaj na początek</button>
+<label for="answer">Zgadzam sie na wyslanie</label>
+<input type="checkbox" id="answer"name="answer">
+<button id="send" type="button" disabled>Send</button>
+
+
+</body>
+</html>
+</body>
+</html>
