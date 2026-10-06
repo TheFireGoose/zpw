@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        #klik{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(function(){
+            // $("#zmien").click(function(){
+            //     $("#tekst").text("Nowy tekst")
+            // })
+
+            // $("#przelac").click(function(){
+            //     $("#pudelko").toggle()
+            // })
+            // $("#klik").click(function(){
+            //     $(this).toggleClass();
+            // })
+
+            // let imie = $("#imie").val().trim()
+            // $("#przywitaj").click(function(){
+            //     if(!imie == ""){
+            //          $("#wynik").text("Witaj" + imie + "!")
+            //     } else {
+            //         alert("Podaj imie")
+            //     }
+                
+            // })
+            
+            // $("#akceptuje").change(function(){
+            //     $("#wyslij").removeAttr("disabled","disabled")
+            // })
+            // $("#li").each(function(index,element){
+              
+            // })
+
+            $("#zaloguj").click(function(){
+                if($("#login").val().length < 3 || $("#login").val() < 6){
+                    $("komunikat").text("Wszystko nie git").css("back-ground-color","red")
+                } else {
+                    $("komunikat").text("Wszystko git").css("back-ground-color","green")
+                }
+            })
+        })
+    </script>
+    <input type="text" id="login">
+    <input type="password" id="haslo">
+    <button id="zaloguj">Zaloguj</button>
+    <p id="komunikat"></p>
+<!-- 
+    <p id="tekst">Stary tekst</p>
+    <button type="button" id="zmien">Zmienic</button>
+
+    <div id="pudelko">widzis mnie</div>
+    <button type="button" id="przelac">Pokaz/ukryj</button>
+
+    <p id="klik">Kliknij mnie</p>
+
+    <input type="text" name="imie" id="imie">
+    <button type="button" id="przywitaj">Przywitaj</button>
+    <p id="wynik"></p>
+
+    <input type="checkbox" name="akceptuje" id="akceptuje" >akceptuje regulamin
+    <button type="button" id="wyslij" disabled>Wyslij</button>
+
+    <ul id="menu">
+        <li>Strona glowna</li>
+        <li>O nas</li>
+        <li>kontakt</li>
+    </ul> -->
+
+    
+</body>
+</html>
