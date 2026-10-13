@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            $("#tekst").keyup(function(e){
+                let num = $("#tekst").val().length
+                if(num <= 10){
+                    $("#pozostalo").text("pozostalo " +  (10 - ($("#tekst").val().length)))
+                    $("#pozostalo").removeClass("blad")
+                } else {
+                    $("#pozostalo").text("pozostalo: " + 0)
+                    $("#pozostalo").addClass("blad")
+                }
+                if(e.key == "Escape"){
+                    $("#pozostalo").text("pozostalo: 10")
+                    $("#pozostalo").removeClass("blad")
+                    $(this).val("")
+                }
+                if(e.key == "Enter" && $(this).val("admin")){
+                    console.log("Dostep przyznany")
+                }
+                
+            })
+        })
+    </script> 
+    <style> 
+        .blad{
+            background-color: red;
+        }
+    </style>
+    <input type="text" id="tekst">
+    <p id="pozostalo">Pozostalo</p>
+</body>
+</html>
