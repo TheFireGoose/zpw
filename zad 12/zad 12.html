@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+        // $("#news").change(function(){
+        //     if($(this).is(".checked")){
+        //         $("#stan").text("Zapisano")
+        //     } else {
+        //         $("#stan").text("Wypisano")
+        //     }
+        //     })  
+        
+        // $("#reg").change(function(){
+        //     if($(this).is(":checked")){
+        //         $("#but").prop("disabled",false)
+        //     } else {
+        //         $("#but").prop("disabled",true)
+        //     }
+        // })
+            // $("#tekst").on("input",function(){
+            //     $("#poglad").text($(this).val() )
+            // })
+            $("#area").on("input",function(){
+                let zan = 100 - $(this).val().length;
+                $("#znaki").text("Pozostalo znakow " + zan)
+
+                if(zan < 10){
+                   $("#znaki").css("color","red") 
+                } else {
+                    $("#znaki").css("color","black") 
+                }
+            })
+        });
+    </script> 
+    <!-- <input type="checkbox" id="news">Chce newstler
+    <p id="stan"></p> -->
+    <input type="checkbox" id="reg">Akceptuje reg
+    <button type="submit" id="but" disabled>Zarejestruj</button>
+    <p id="stan"></p>
+    <hr>
+    <input type="text" id="tekst">
+    <p>Poglad <span id="poglad"></span></p>
+
+    <input type="textarea" maxlength="100" id="area">
+    <p id="znaki"></p>
+</body>
+</html>

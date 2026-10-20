@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            $("#form2").submit(function(e){
+                e.preventDefault()
+                // if($("#nick").val() === ""){
+                //     $("info").text("Podaj nick")
+                // } else {
+                //     $("info").text("Wyslano")
+                // }
+
+                // if($("password").length < 6){
+                //     $("#log").text("Haslo jest krotkie").css("color","red")      
+                // } else {
+                //     $("#log").text("Zalogowano").css("color","green")  
+                // }
+
+                // $("#kolor").change(function(){
+                //     $("body").css("backgound-color",$(this).val())
+                // })
+                    
+            })
+            $("#form4").change(function(){
+                        $("#info4").text("Do zaplaty " + $(this).val());
+                    });
+        });
+    </script> 
+
+    <form id="form">
+        <input type="text" name="text" id="nick">
+        <button type="submit">Wyslij</button>
+    </form>
+    <p id="info"></p>
+    <hr>
+    <form id="form2">
+        <label for="mail">E-mail</label>
+        <input type="text" name="text" id="mail">
+        <label for="passowrd">Haslo</label>
+        <input type="text" name="text" id="password">
+        <button type="submit">Wyslij mail</button>
+    </form>
+    <p id="log"></p>
+    <hr>
+    <form id="form3">
+        <select name="kolor" id="kolor">
+            <option value="white">Bialy</option>
+        <option value="yellow">Zolty</option>
+        <option value="lightblue">Niebieski</option>
+        </select>
+    </form>
+    <hr>
+      
+        <select name="form4" id="form4">
+            <option value="20zl">Mala</option>
+            <option value="30zl">Srednia</option>
+            <option value="40zl">Duza</option>
+        </select>
+    
+    <p id="info4"></p>
+</body>
+</html>
