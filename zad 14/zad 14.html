@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+        // $("#szukaj").keydown(function(e){
+        //     let tekst = $(this).val().trim()
+        //     if(e.key == "Enter" && tekst != ""){
+        //         $("#wynik").text("Szukam: " + tekst).css("color","black");
+        //     } else {
+        //         $("#wynik").text("Wpisz frazę!").css("color","red")
+        //     } 
+        //     if(e.key == "Escape") {
+        //         $("#szukaj").val("")
+        //     } else {
+
+        //     }
+        // })
+        // $("#haslo").on("input",function(){
+        //     let pass = $(this).val().trim();
+        //     if(pass.length < 6){
+        //         $("p").addClass("slabe")
+        //     } else if (pass.length >= 5 || pass.length <= 9) {
+        //         $("p").addClass("srednie")
+        //     } else {
+        //         $("p").addClass("silne")
+        //     }
+        // })
+        $("button").click(function(e){
+            e.preventDefault()
+            let pass = $("#pass").val().trim()
+            if(pass.length < 6){
+                $("#info").text("Hasło za krótkie")
+            } else if(pass.length == ""){
+                $("#info").text("Podaj login")
+            } else {
+                $("#info").text("Witaj," + pass).css("color","green")
+            }
+        })
+        });
+    </script> 
+    <style>
+        .slabe{
+            color: red;
+        }
+        .srednie{
+            color: orange;
+        }
+        .silne{
+            color: green;
+        }
+    </style>
+    <form id="logowanie">
+        <input type="text" id="login" placeholder="Login">
+        <input type="password" id="pass" placeholder="Hasło">
+        <button type="submit">Zaloguj</button>
+    </form>
+    <p id="info"></p>
+    <!-- <input type="password" id="haslo">
+    <p id="sila">sdjosdhosdo</p> -->
+        <!-- <input type="text" id="szukaj" placeholder="Szukaj...">
+        <p id="wynik"></p> -->
+        <!-- Zadanie 2: Limit długości hasła
+
+Zablokuj wysłanie formularza (preventDefault). Jeśli login jest pusty → „Podaj login”. 
+Jeśli hasło ma mniej niż 6 znaków → „Hasło za krótkie”. W przeciwnym razie → „Witaj, [login]!” na zielono.
+
+</body>
+</html>
